@@ -15,11 +15,6 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-<div class="container mt-5">
-    <input type="number" id="numero" class="form-control mb-3">
-    <button class="btn btn-primary" onclick="stampaNumeri()">Stampa numeri</button>
-    <p id="risultato"></p>
-</div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
@@ -48,15 +43,6 @@
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-function stampaNumeri() {
-    var numero = document.getElementById("numero").value;
-    var risultato = document.getElementById("risultato");
-    var sequenza = "";
-    for (var i = 1; i <= numero; i++) {
-        sequenza += i + " ";
-    }
-    risultato.innerHTML = "Sequenza: " + sequenza + "<br>10% del numero: " + (numero * 0.1);
-}
       </form>
     </div>
   </div>
