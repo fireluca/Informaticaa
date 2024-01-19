@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatore e Tabelline</title>
+</head>
+<body>
+
+<div id="output"></div>
+
+<script>
+   
+    function startCounter() {
+        var counter = 1;
+        var interval = setInterval(function() {
+            document.getElementById('output').innerHTML += 'Contatore: ' + counter + '<br>';
+            counter++;
+
+            if (counter > 5) {
+                clearInterval(interval);
+                printMultiplicationTables();
+            }
+        }, 1000);
+    }
+
+    // Funzione per stampare le tabelline del 1 al 10
+    function printMultiplicationTables() {
+        for (var i = 1; i <= 10; i++) {
+            printMultiplicationTable(i);
+        }
+    }
+
+    // Funzione per stampare la tabellina del 1 al 10 per un dato moltiplicatore
+    function printMultiplicationTable(multiplier) {
+        var table = '<br>Tabellina del ' + multiplier + ':<br>';
+        for (var i = 1; i <= 10; i++) {
+            table += i + ' x ' + multiplier + ' = ' + (i * multiplier) + '<br>';
+        }
+        document.getElementById('output').innerHTML += table;
+    }
+
+ 
+    window.onload = function() {
+        startCounter();
+    };
+</script>
+
+</body>
+</html>
