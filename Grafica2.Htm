@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generatore di Div</title>
+  <style>
+    /* Stile di default per i div generati */
+    .generated-div {
+      width: 10px;
+      height: 10px;
+      border: 1px solid black;
+      margin: 5px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
 
+  <label for="numeroDiv">Inserisci il numero di div:</label>
+  <input type="number" id="numeroDiv" min="1" value="1">
+  <button onclick="creaDiv()">Genera Div</button>
+
+  <div id="container"></div>
+
+  <script>
+    function creaDiv() {
+      // Ottieni il numero inserito dall'utente
+      var numeroDiv = document.getElementById("numeroDiv").value;
+
+      // Ottieni il contenitore in cui inserire i div
+      var container = document.getElementById("container");
+
+      // Pulisci il contenitore
+      container.innerHTML = '';
+
+      // Ciclo for per creare i div
+      for (var i = 0; i < numeroDiv; i++) {
+        // Crea un nuovo div
+        var nuovoDiv = document.createElement("div");
+
+        // Assegna una classe per applicare lo stile
+        nuovoDiv.className = "generated-div";
+
+        // Colora il div a piacere (puoi cambiare il colore come desideri)
+        var colore = getRandomColor();
+        nuovoDiv.style.backgroundColor = colore;
+
+        // Aggiungi il div al contenitore
+        container.appendChild(nuovoDiv);
+      }
+    }
+
+    // Funzione per generare un colore casuale in formato esadecimale
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+
+</body>
+</html>
