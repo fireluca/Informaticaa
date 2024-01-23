@@ -51,12 +51,16 @@
           $isEven = $i % 2 === 0;
           $isLight = $i % 20 <= 10; // Cambia sfondo ogni 10 numeri
 
+          if ($i % 10 === 1) {
+            echo '<tr>';
+          }
+
           echo '<td>';
           echo '<div class="square ' . ($isEven ? 'square-light' : 'square-dark') . '"></div>';
           echo '</td>';
 
           if ($i % 10 === 0) {
-            echo '</tr><tr>';
+            echo '</tr>';
           }
         }
       ?>
