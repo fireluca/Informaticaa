@@ -51,22 +51,28 @@
       color: #ffffff !important;
     }
 
-/* Aggiunta di colore #01FEFD alla scritta "Remember Me" e della spunta con effetto hover */
+  /* Aggiunta di colore #01FEFD alla scritta "Remember Me" e della spunta con effetto hover */
     .checkbox-wrap.checkbox-primary label {
       color: #01FEFD !important;
+      display: inline-block;
+      position: relative;
+      padding-left: 25px; /* Aggiunto spazio a sinistra per la spunta */
+      cursor: pointer;
     }
 
     /* Nasconde la spunta quando non è selezionata */
     .checkbox-wrap.checkbox-primary input[type="checkbox"] {
-      display: none;
+      position: absolute;
+      opacity: 0;
     }
 
     /* Stile personalizzato per la spunta */
     .checkbox-wrap.checkbox-primary input[type="checkbox"] + .checkmark {
-      position: relative;
-      display: inline-block;
-      width: 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
       height: 20px;
+      width: 20px;
       background-color: #ffffff;
       border: 1px solid #01FEFD;
     }
@@ -117,8 +123,8 @@
                 <div class="w-50 text-left">
                   <label class="checkbox-wrap checkbox-primary mb-0" style="color: #01FEFD;">
                     Remember Me
-                    <input type="checkbox" checked style="display: none;">
-                    <span class="checkmark"></span>
+                    <input type="checkbox" checked style="position: absolute; opacity: 0;">
+                    <span class="checkmark" style="position: absolute; left: 0; top: 0; height: 20px; width: 20px; background-color: #ffffff; border: 1px solid #01FEFD;"></span>
                   </label>
                 </div>
                 <div class="w-50 text-md-right">
