@@ -43,29 +43,29 @@
 <body>
 
   <table>
-    <tbody>
-      <?php
-        $count = 0;
-
-        for ($i = 1; $i <= 100; $i++) {
-          $isEven = $i % 2 === 0;
-          $isLight = $i % 20 <= 10; // Cambia sfondo ogni 10 numeri
-
-          if ($i % 10 === 1) {
-            echo '<tr>';
-          }
-
-          echo '<td>';
-          echo '<div class="square ' . ($isEven ? 'square-light' : 'square-dark') . '"></div>';
-          echo '</td>';
-
-          if ($i % 10 === 0) {
-            echo '</tr>';
-          }
-        }
-      ?>
-    </tbody>
+    <tbody id="table-body"></tbody>
   </table>
+
+  <script>
+    var tableBody = document.getElementById('table-body');
+
+    for (var i = 1; i <= 100; i++) {
+      var isEven = i % 2 === 0;
+      var isLight = i % 20 <= 10;
+
+      if (i % 10 === 1) {
+        var row = document.createElement('tr');
+        tableBody.appendChild(row);
+      }
+
+      var cell = document.createElement('td');
+      var square = document.createElement('div');
+      square.className = 'square ' + (isEven ? 'square-light' : 'square-dark');
+      cell.appendChild(square);
+      row.appendChild(cell);
+    }
+  </script>
 
 </body>
 </html>
+
