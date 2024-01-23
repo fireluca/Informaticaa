@@ -58,10 +58,12 @@
   box-shadow: 0 0 0 0.2rem rgba(1, 254, 253, 0.25) !important; /* Aggiungi un'ombra leggera */
   color: #01FEFD !important; /* Cambia il colore del testo in fase di focus */
 }
-   /* Cambia il colore della scritta "Remember Me" */
-.checkbox-wrap.checkbox-primary label {
+ /* Cambia il colore della scritta "Remember Me" e della spunta adiacente */
+.checkbox-wrap.checkbox-primary input[type="checkbox"]:checked + span.checkmark {
   color: #01FEFD !important;
+  border-color: #01FEFD !important;
 }
+
 
   </style>
 
