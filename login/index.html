@@ -58,9 +58,14 @@
       position: relative;
       padding-left: 25px; /* Aggiunto spazio a sinistra per la spunta */
       cursor: pointer;
-    }.checkbox-wrap.checkbox-primary input:checked + .checkmark {
+    }
+    .checkbox-wrap.checkbox-primary input:checked + .checkmark {
   background-color: #01FEFD; /* Imposta il colore di sfondo del pulsante cliccabile */
-  border: 1px solid #01FEFD; /* Imposta il colore del contorno della spunta e rimuove il bordo grigio sopra */
+  border: none; /* Rimuovi il bordo */
+}
+
+.checkbox-wrap.checkbox-primary input:checked:hover + .checkmark {
+  background-color: #01FEFD; /* Cambia il colore di sfondo durante l'effetto hover quando la casella di controllo è selezionata */
 }
 
 .checkbox-wrap.checkbox-primary input:checked + .checkmark::after {
@@ -73,6 +78,7 @@
   border: solid #ffffff; /* Imposta il colore della spunta a bianco */
   border-width: 0 2px 2px 0;
 }
+
 
 
 
