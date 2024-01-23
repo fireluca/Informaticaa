@@ -58,11 +58,41 @@
   box-shadow: 0 0 0 0.2rem rgba(1, 254, 253, 0.25) !important; /* Aggiungi un'ombra leggera */
   color: #01FEFD !important; /* Cambia il colore del testo in fase di focus */
 }
- /* Cambia il colore della scritta "Remember Me" e della spunta adiacente */
-.checkbox-wrap.checkbox-primary input[type="checkbox"]:checked + span.checkmark {
-  color: #01FEFD !important;
-  border-color: #01FEFD !important;
+ /* Stile personalizzato per la checkbox e la label */
+.checkbox-custom {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
 }
+
+/* Stile della checkbox personalizzata */
+.checkbox-custom input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Stile della spunta personalizzata */
+.checkbox-custom .checkmark {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #01FEFD;
+  background-color: #ffffff;
+}
+
+/* Cambia colore della spunta e testo al clic */
+.checkbox-custom input:checked + .checkmark {
+  background-color: #01FEFD;
+  border-color: #01FEFD;
+}
+
+/* Stile della label */
+.checkbox-custom .checkbox-label {
+  color: #01FEFD;
+  margin-left: 10px;
+}
+
 
 
   </style>
@@ -124,6 +154,17 @@
       </div>
     </div>
   </div>
+
+  <div class="form-group d-md-flex">
+    <div class="w-50 text-left checkbox-custom" id="rememberMeCheckbox">
+        <span class="checkmark"></span>
+        <label class="checkbox-label">Remember Me</label>
+        <input type="checkbox" checked>
+    </div>
+    <div class="w-50 text-md-right">
+        <a href="#">Forgot Password</a>
+    </div>
+</div>
 </section>
 
 <script src="js/jquery.min.js"></script>
