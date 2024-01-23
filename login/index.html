@@ -58,10 +58,9 @@
       position: relative;
       padding-left: 25px; /* Aggiunto spazio a sinistra per la spunta */
       cursor: pointer;
-    }
-.checkbox-wrap.checkbox-primary input:checked + .checkmark {
+    }.checkbox-wrap.checkbox-primary input:checked + .checkmark {
   background-color: #01FEFD; /* Imposta il colore di sfondo del pulsante cliccabile */
-  border-color: #01FEFD; /* Imposta il colore del contorno della spunta */
+  border: 1px solid #01FEFD; /* Imposta il colore del contorno della spunta e rimuove il bordo grigio sopra */
 }
 
 .checkbox-wrap.checkbox-primary input:checked + .checkmark::after {
@@ -72,7 +71,9 @@
   width: 5px;
   height: 10px;
   border: solid #ffffff; /* Imposta il colore della spunta a bianco */
-  border-width: 0 2px 2px 0
+  border-width: 0 2px 2px 0;
+}
+
 
 
   </style>
