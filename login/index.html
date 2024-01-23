@@ -55,7 +55,12 @@
   color: #01FEFD !important;
 }
 
-/* Cambia il colore della spunta adiacente */
+/* Nasconde la spunta quando non è selezionata */
+.checkbox-wrap.checkbox-primary input[type="checkbox"] {
+  display: none;
+}
+
+/* Mostra la spunta solo quando è selezionata */
 .checkbox-wrap.checkbox-primary input[type="checkbox"]:checked + .checkmark {
   background-color: #01FEFD !important;
   border-color: #01FEFD !important;
