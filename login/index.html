@@ -44,7 +44,14 @@
       user-select: none;
     }
 
-   /* Stile della spunta con colore di default */
+  /* Impostazione di colore #01FEFD al pulsante "Sign In" senza effetto hover */
+    .submit.btn-primary {
+      background-color: #01FEFD !important;
+      border: 1px solid #01FEFD !important;
+      color: #ffffff !important;
+    }
+
+    /* Stile della spunta con colore personalizzato */
     .checkbox-wrap {
       position: relative;
       padding-left: 35px;
@@ -59,8 +66,8 @@
       height: 25px;
       width: 25px;
       background-color: #fff;
-      border: 1px solid #01FEFD;
-      transition: background-color 0.3s ease; /* Aggiunto effetto di transizione */
+      border: 1px solid #01FEFD; /* Colore del bordo personalizzato */
+      transition: border-color 0.3s ease; /* Aggiunto effetto di transizione per il colore del bordo */
     }
 
     .checkbox-wrap input {
@@ -69,7 +76,7 @@
 
     /* Stile della spunta quando selezionata */
     .checkbox-wrap input:checked + .checkmark {
-      background-color: #01FEFD;
+      border-color: #01FEFD !important; /* Cambia il colore del bordo quando la spunta è selezionata */
     }
   </style>
 </head>
