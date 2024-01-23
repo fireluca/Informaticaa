@@ -44,7 +44,7 @@
       user-select: none;
     }
 
-     /* Stile della spunta con colore di default */
+   /* Stile della spunta con colore di default */
     .checkbox-wrap {
       position: relative;
       padding-left: 35px;
@@ -63,13 +63,13 @@
       transition: background-color 0.3s ease; /* Aggiunto effetto di transizione */
     }
 
-    .checkmark.checked {
-      background-color: #01FEFD;
+    .checkbox-wrap input {
+      display: none; /* Nascondi il checkbox predefinito */
     }
 
-    .checkbox-wrap input {
-      opacity: 0;
-      cursor: pointer;
+    /* Stile della spunta quando selezionata */
+    .checkbox-wrap input:checked + .checkmark {
+      background-color: #01FEFD;
     }
   </style>
 </head>
