@@ -51,32 +51,15 @@
       color: #ffffff !important;
     }
 
-    //* Stile della spunta con colore predefinito */
-    .checkbox-wrap {
-      position: relative;
-      padding-left: 35px;
-      cursor: pointer;
-      user-select: none;
+    /* Aggiunta di colore #01FEFD alla scritta "Remember Me" */
+    .checkbox-wrap label.checkbox-label {
+      color: #01FEFD !important;
+      transition: color 0.3s ease; /* Aggiunto effetto di transizione per una transizione più fluida */
     }
 
-    .checkmark {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 25px;
-      width: 25px;
-      background-color: #fff;
-      border: 1px solid #ccc; /* Colore del bordo predefinito */
-      transition: border-color 0.3s ease; /* Aggiunto effetto di transizione per il colore del bordo */
-    }
-
-    .checkbox-wrap input {
-      display: none; /* Nascondi il checkbox predefinito */
-    }
-
-    /* Stile della spunta quando selezionata */
-    .checkbox-wrap input:checked + .checkmark {
-      border-color: #01FEFD !important; /* Cambia il colore del bordo quando la spunta è selezionata */
+    /* Effetto hover sulla scritta "Remember Me" */
+    .checkbox-wrap label.checkbox-label:hover {
+      color: blue !important; /* Cambia il colore a blu al passaggio del mouse */
     }
   </style>
 </head>
