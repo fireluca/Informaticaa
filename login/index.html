@@ -44,6 +44,14 @@
       user-select: none;
     }
 
+   /* Stile della spunta con colore di default */
+    .checkbox-wrap {
+      position: relative;
+      padding-left: 35px;
+      cursor: pointer;
+      user-select: none;
+    }
+
     /* Impostazione di colore #01FEFD alla spunta quando cliccata */
     .checkmark {
       position: absolute;
@@ -53,6 +61,7 @@
       width: 25px;
       background-color: #fff;
       border: 1px solid #01FEFD;
+      transition: background-color 0.3s ease; /* Aggiunto effetto di transizione */
     }
 
     .checkbox-wrap input {
@@ -62,7 +71,12 @@
 
     /* Stile della spunta quando selezionata */
     .checkbox-wrap input:checked ~ .checkmark {
-      background-color: #01FEFD;
+      background-color: #01FEFD !important;
+    }
+
+    /* Rimuovi la selezione del testo durante il click sulla spunta */
+    .checkbox-wrap input:active ~ .checkmark {
+      user-select: none;
     }
   </style>
 </head>
