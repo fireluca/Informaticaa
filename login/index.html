@@ -50,9 +50,15 @@
       border: 1px solid #01FEFD !important;
       color: #ffffff !important;
     }
-/* Cambia il colore della scritta "Remember Me" */
+/* Cambia il colore della scritta "Remember Me" e della spunta adiacente */
 .checkbox-wrap.checkbox-primary label {
   color: #01FEFD !important;
+}
+
+.checkbox-wrap.checkbox-primary input[type="checkbox"]:checked + .checkmark {
+  background-color: #01FEFD !important;
+  border-color: #01FEFD !important;
+}
  
   </style>
 </head>
