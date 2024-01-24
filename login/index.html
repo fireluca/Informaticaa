@@ -59,11 +59,11 @@
   color: #01FEFD !important; /* Cambia il colore del testo in fase di focus */
 }
  /* Stile personalizzato per la checkbox e la label */
-.checkbox-custom {
-  display: inline-flex;
-  align-items: center;
+.checkbox-wrap {
+  position: relative;
+  padding-left: 35px;
   cursor: pointer;
-  color: #01FEFD !important;
+  user-select: none;
 }
 
 /* Stile della checkbox personalizzata */
@@ -75,12 +75,13 @@
 
 /* Stile della spunta personalizzata */
 .checkbox-custom .checkmark {
-  position: relative;
-  display: inline-block;
-  width: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 20px;
-  border: 1px solid #01FEFD;
+  width: 20px;
   background-color: #01FEFD;
+  border: 1px solid #01FEFD;
   color: #01FEFD !important;
 }
 
@@ -142,7 +143,7 @@
               </div>
               <div class="form-group d-md-flex" style="color: #01FEFD;">
                 <div class="w-50 text-left">
-                  <label class="checkbox-wrap checkbox-primary mb-0" style="color:#01FEFD;">Remember Me
+                  <label class="checkbox-wrap" style="color:#01FEFD;">Remember Me
                     <input type="checkbox" checked>
                     <span class="checkmark"></span>
                   </label>
