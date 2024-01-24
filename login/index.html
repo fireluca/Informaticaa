@@ -35,11 +35,12 @@
     }
 
     /* Stile personalizzato per la checkbox e la label */
-    .checkbox-custom {
-      display: inline-flex;
-      align-items: center;
+    .checkbox-wrap {
+      position: relative;
+      padding-left: 35px;
       cursor: pointer;
-      color: #01FEFD !important;
+      user-select: none;
+      color: #01FEFD; /* Cambiato colore del testo a #01FEFD */
     }
 
     /* Stile della checkbox personalizzata */
@@ -51,26 +52,21 @@
 
     /* Stile della spunta personalizzata */
     .checkbox-custom .checkmark {
-      position: relative;
-      display: inline-block;
-      width: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
       height: 20px;
-      border: 1px solid #01FEFD;
+      width: 20px;
       background-color: #01FEFD;
-      color: #ffffff; /* Cambiato il colore del testo a bianco */
+      border: 1px solid #01FEFD;
+      color: #01FEFD !important;
     }
 
     /* Cambia colore della spunta e testo al clic */
     .checkbox-custom input:checked + .checkmark {
       background-color: #01FEFD;
       border-color: #01FEFD;
-      color: #ffffff;
-    }
-
-    /* Stile della label */
-    .checkbox-custom .checkbox-label {
-      color: #01FEFD;
-      margin-left: 10px;
+      color: #01FEFD !important;
     }
   </style>
 
@@ -111,11 +107,11 @@
                 <input type="password" class="form-control" placeholder="Password" required>
               </div>
               <div class="form-group">
-                <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
+                <button type="submit" class="form-control btn btn-primary rounded submit px-3" >Sign In</button>
               </div>
-              <div class="form-group d-md-flex" style="color: #01FEFD;">
+              <div class="form-group d-md-flex">
                 <div class="w-50 text-left">
-                  <label class="checkbox-wrap checkbox-primary mb-0" style="color:#01FEFD;">Remember Me
+                  <label class="checkbox-wrap mb-0">Remember Me
                     <input type="checkbox" checked>
                     <span class="checkmark"></span>
                   </label>
