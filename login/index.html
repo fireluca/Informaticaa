@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <style>
-    /* Aggiunta di colore #01FEFD alle icone dei social media con effetto hover */
+<style>
+/* Aggiunta di colore #01FEFD alle icone dei social media con effetto hover */
     .social-icon {
       background-color: #ffffff !important;
       border: 1px solid #ffffff !important;
@@ -22,7 +22,6 @@
       background-color: #01FEFD !important;
       color: #ffffff !important; /* Cambia il colore del testo a bianco quando passi sopra con il mouse */
     }
-
     /* Aggiunta di colore #01FEFD alla scritta "Sign Up" con effetto hover */
     a[data-toggle="tab"] {
       color: #01FEFD !important;
@@ -33,41 +32,73 @@
     a[data-toggle="tab"]:hover {
       color: blue !important; /* Cambia il colore a blu al passaggio del mouse */
     }
-
-    /* Stile personalizzato per la checkbox e la label */
-    .checkbox-wrap {
+ .submit.btn-primary {
+      background-color: #01FEFD !important;
+      border: 1px solid #01FEFD !important;
+      color: #ffffff !important;
+    }
+.checkbox-wrap {
       position: relative;
       padding-left: 35px;
       cursor: pointer;
       user-select: none;
-      color: #01FEFD; /* Cambiato colore del testo a #01FEFD */
     }
 
-    /* Stile della checkbox personalizzata */
-    .checkbox-custom input {
-      position: absolute;
-      opacity: 0;
-      color: #01FEFD !important;
+  /* Impostazione di colore #01FEFD al pulsante "Sign In" senza effetto hover */
+    .submit.btn-primary {
+      background-color: #01FEFD !important;
+      border: 1px solid #01FEFD !important;
+      color: #ffffff !important;
     }
 
-    /* Stile della spunta personalizzata */
-    .checkbox-custom .checkmark {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 20px;
-      width: 20px;
-      background-color: #01FEFD;
-      border: 1px solid #01FEFD;
-      color: #01FEFD !important;
-    }
 
-    /* Cambia colore della spunta e testo al clic */
-    .checkbox-custom input:checked + .checkmark {
-      background-color: #01FEFD;
-      border-color: #01FEFD;
-      color: #01FEFD !important;
-    }
+    /* Modifica colore focus e testo nelle caselle di testo */
+.form-control:focus {
+  border-color: #01FEFD !important; /* Cambia il colore del bordo in fase di focus */
+  box-shadow: 0 0 0 0.2rem rgba(1, 254, 253, 0.25) !important; /* Aggiungi un'ombra leggera */
+  color: #01FEFD !important; /* Cambia il colore del testo in fase di focus */
+}
+ /* Stile personalizzato per la checkbox e la label */
+.checkbox-custom {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: #01FEFD !important;
+}
+
+/* Stile della checkbox personalizzata */
+.checkbox-custom input {
+  position: absolute;
+  opacity: 0;
+  color: #01FEFD !important;
+}
+
+/* Stile della spunta personalizzata */
+.checkbox-custom .checkmark {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #01FEFD;
+  background-color: #01FEFD;
+  color: #01FEFD !important;
+}
+
+/* Cambia colore della spunta e testo al clic */
+.checkbox-custom input:checked + .checkmark {
+  background-color: #01FEFD;
+  border-color: #01FEFD;
+  color: #01FEFD !important;
+}
+
+/* Stile della label */
+.checkbox-custom .checkbox-label {
+  color: #01FEFD;
+  margin-left: 10px;
+}
+
+
+
   </style>
 
 </head>
@@ -107,11 +138,11 @@
                 <input type="password" class="form-control" placeholder="Password" required>
               </div>
               <div class="form-group">
-                <button type="submit" class="form-control btn btn-primary rounded submit px-3" style="background-color:#01FEFD">Sign In</button>
+                <button type="submit" class="form-control btn btn-primary rounded submit px-3" >Sign In</button>
               </div>
-              <div class="form-group d-md-flex">
+              <div class="form-group d-md-flex" style="color: #01FEFD;">
                 <div class="w-50 text-left">
-                  <label class="checkbox-wrap mb-0">Remember Me
+                  <label class="checkbox-wrap checkbox-primary mb-0" style="color:#01FEFD;">Remember Me
                     <input type="checkbox" checked>
                     <span class="checkmark"></span>
                   </label>
@@ -127,6 +158,7 @@
       </div>
     </div>
   </div>
+
 </section>
 
 <script src="js/jquery.min.js"></script>
