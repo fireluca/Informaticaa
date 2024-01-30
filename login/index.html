@@ -9,164 +9,176 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
 
-<style>
-/* Aggiunta di colore #01FEFD alle icone dei social media con effetto hover */
+  <style>
+    /* Aggiunta di colore #01FEFD alle icone dei social media con effetto hover */
     .social-icon {
       background-color: #ffffff !important;
       border: 1px solid #ffffff !important;
-      color: #01FEFD !important; /* Cambia il colore del testo a #01FEFD */
+      color: #01FEFD !important;
     }
 
     /* Effetto hover sugli icon */
     .social-icon:hover {
       background-color: #01FEFD !important;
-      color: #ffffff !important; /* Cambia il colore del testo a bianco quando passi sopra con il mouse */
+      color: #ffffff !important;
     }
+
     /* Aggiunta di colore #01FEFD alla scritta "Sign Up" con effetto hover */
     a[data-toggle="tab"] {
       color: #01FEFD !important;
-      transition: color 0.3s ease; /* Aggiunto effetto di transizione per una transizione più fluida */
+      transition: color 0.3s ease;
     }
 
     /* Effetto hover sulla scritta "Sign Up" */
     a[data-toggle="tab"]:hover {
-      color: blue !important; /* Cambia il colore a blu al passaggio del mouse */
+      color: blue !important;
     }
- .submit.btn-primary {
-      background-color: #01FEFD !important;
-      border: 1px solid #01FEFD !important;
-      color: #ffffff !important;
-    }
-.checkbox-wrap {
+
+    /* Stile personalizzato per la checkbox e la label */
+    .checkbox-wrap {
       position: relative;
       padding-left: 35px;
       cursor: pointer;
       user-select: none;
     }
 
-  /* Impostazione di colore #01FEFD al pulsante "Sign In" senza effetto hover */
+    /* Impostazione di colore #01FEFD al pulsante "Sign In" senza effetto hover */
     .submit.btn-primary {
       background-color: #01FEFD !important;
       border: 1px solid #01FEFD !important;
       color: #ffffff !important;
     }
 
-
     /* Modifica colore focus e testo nelle caselle di testo */
-.form-control:focus {
-  border-color: #01FEFD !important; /* Cambia il colore del bordo in fase di focus */
-  box-shadow: 0 0 0 0.2rem rgba(1, 254, 253, 0.25) !important; /* Aggiungi un'ombra leggera */
-  color: black !important; /* Cambia il colore del testo in fase di focus */
-}
- /* Stile personalizzato per la checkbox e la label */
-.checkbox-wrap {
-  position: relative;
-  padding-left: 35px;
-  cursor: pointer;
-  user-select: none;
-}
+    .form-control:focus {
+      border-color: #01FEFD !important;
+      box-shadow: 0 0 0 0.2rem rgba(1, 254, 253, 0.25) !important;
+      color: black !important;
+    }
 
-/* Stile della checkbox personalizzata */
-.checkbox-custom input {
-  position: absolute;
-  opacity: 0;
-  color: #01FEFD !important;
-}
+    /* Stile della checkbox personalizzata */
+    .checkbox-custom input {
+      position: absolute;
+      opacity: 0;
+      color: #01FEFD !important;
+    }
 
-/* Stile della spunta personalizzata */
-.checkbox-custom .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  background-color: #01FEFD;
-  border: 1px solid #01FEFD;
-  color: light-blue;
-}
+    /* Stile della spunta personalizzata */
+    .checkbox-custom .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background-color: #01FEFD;
+      border: 1px solid #01FEFD;
+      color: light-blue;
+    }
 
-/* Cambia colore della spunta e testo al clic */
-.checkbox-custom input:checked + .checkmark {
-  background-color: #01FEFD;
-  border-color: #01FEFD;
-  color: #01FEFD !important;
-}
+    /* Cambia colore della spunta e testo al clic */
+    .checkbox-custom input:checked + .checkmark {
+      background-color: #01FEFD;
+      border-color: #01FEFD;
+      color: #01FEFD !important;
+    }
 
-/* Stile della label */
-.checkbox-custom .checkbox-label {
-  color: #01FEFD;
-  margin-left: 10px;
-}
+    /* Stile della label */
+    .checkbox-custom .checkbox-label {
+      color: #01FEFD;
+      margin-left: 10px;
+    }
 
+    /* Password toggle styles */
+    .password-toggle {
+      position: relative;
+    }
 
+    .toggle-icon {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
 
+    /* Styles for the eye icon */
+    .fa-eye:before {
+      content: "\f06e"; /* Unicode for open eye icon */
+    }
+
+    .fa-eye-slash:before {
+      content: "\f070"; /* Unicode for slashed eye icon */
+    }
+
+    /* Hide password by default */
+    .password-toggle input[type="password"] {
+      padding-right: 30px;
+    }
+
+    /* Toggle password visibility */
+    .password-toggle.show-password input[type="password"] {
+      padding-right: 20px;
+    }
   </style>
 
 </head>
 <body>
 
-<section class="ftco-section">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-6 text-center mb-5">
-        <h2 class="heading-section">ElettroImpianti Albu</h2>
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center mb-5">
+          <h2 class="heading-section">ElettroImpianti Albu</h2>
+        </div>
       </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-md-12 col-lg-10">
-        <div class="wrap d-md-flex">
-         <div class="img" style="background-image: url(images/impianti.png);"></div>
+      <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-10">
+          <div class="wrap d-md-flex">
+            <div class="img" style="background-image: url(images/impianti.png);"></div>
 
-          <div class="login-wrap p-4 p-md-5">
-            <div class="d-flex">
-              <div class="w-100">
-                <h3 class="mb-4">Sign In</h3>
+            <div class="login-wrap p-4 p-md-5">
+              <div class="d-flex">
+                <div class="w-100">
+                  <h3 class="mb-4">Sign In</h3>
+                </div>
+                <div class="w-100">
+                  <p class="social-media d-flex justify-content-end">
+                    <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
+                    <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
+                    <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-instagram"></span></a>
+                  </p>
+                </div>
               </div>
-              <div class="w-100">
-                <p class="social-media d-flex justify-content-end">
-                  <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
-                  <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
-                  <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-instagram"></span></a>
-                </p>
-              </div>
+              <form action="#" class="signin-form">
+                <div class="form-group mb-3">
+                  <label class="label" for="name">Username</label>
+                  <input type="text" class="form-control" placeholder="Username" required>
+                </div>
+                <div class="form-group mb-3">
+                  <label class="label" for="password">Password</label>
+                  <div class="password-toggle">
+                    <input type="password" class="form-control" placeholder="Password" required>
+                    <span class="toggle-icon fa fa-eye" onclick="togglePassword()"></span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
+                </div>
+                <div class="form-group d-md-flex" style="color: #01FEFD;">
+                  <div class="w-50 text-left">
+                    <label class="checkbox-wrap" style="color:#01FEFD;">Remember Me
+                      <input type="checkbox" checked>
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="w-50 text-md-right">
+                    <a href="#">Forgot Password</a>
+                  </div>
+                </div>
+              </form>
+              <p class="text-center">Not a member? <a data-toggle="tab" href="#signup">Sign Up</a></p>
             </div>
-            <form action="#" class="signin-form">
-              <div class="form-group mb-3">
-                <label class="label" for="name">Username</label>
-                <input type="text" class="form-control" placeholder="Username" required>
-              </div>
-              <div class="form-group mb-3">
-                <label class="label" for="password">Password</label>
-                <input type="password" class="form-control" placeholder="Password" required>
-              </div>
-              <div class="form-group">
-                <button type="submit" class="form-control btn btn-primary rounded submit px-3" >Sign In</button>
-              </div>
-              <div class="form-group d-md-flex" style="color: #01FEFD;">
-                <div class="w-50 text-left">
-                  <label class="checkbox-wrap" style="color:#01FEFD;">Remember Me
-                    <input type="checkbox" checked>
-                    <span class="checkmark"></span>
-                  </label>
-                </div>
-                <div class="w-50 text-md-right">
-                  <a href="#">Forgot Password</a>
-                </div>
-              </div>
-            </form>
-            <p class="text-center">Not a member? <a data-toggle="tab" href="#signup">Sign Up</a></p>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-</section>
-
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/main.js"></script>
-
-</body>
-</html> 
+   
